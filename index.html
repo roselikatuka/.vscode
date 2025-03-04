@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finditude - Enhanced</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav id="topbar">
+            <ul>
+                <li><a href="#">PROFILE</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><button id="toggle-theme">Toggle Dark Mode</button></li>
+            </ul>
+        </nav>
+        <div>
+            <h2>Find Your Perfect Hangout Spot</h2>
+            <p>Choose your preferences and explore the best places around!</p>
+            <a href="#">LEARN MORE</a>
+        </div>
+    </header>
+
+    <main>
+        <div id="preferences-form">
+            <h2>Select Your Preferences</h2>
+            <form id="preferencesForm">
+                <label>
+                    Relax
+                    <input type="checkbox" name="Relax">
+                </label>
+                <label>
+                    Hangout
+                    <input type="checkbox" name="Hangout">
+                </label>
+                <label>
+                    Music
+                    <input type="checkbox" name="Music">
+                </label>
+                <button type="submit">Find a Spot</button>
+            </form>
+        </div>
+
+        <div id="results" style="display:none;">
+            <h2>Suggested Hangout Spots</h2>
+            <select id="sortOptions">
+                <option value="popularity">Sort by Popularity</option>
+                <option value="price">Sort by Price</option>
+                <option value="proximity">Sort by Proximity</option>
+            </select>
+            <ul id="results-list"></ul>
+            <h3>Your Favorite Spots</h3>
+            <ul id="favorites-list"></ul>
+        </div>
+
+        <div id="map" style="height: 400px; width: 100%;"></div>
+    </main>
+</body>
+</html>
